@@ -1,0 +1,30 @@
+server:
+  port: 8080
+  read_timeout: 15s
+  write_timeout: 15s
+  idle_timeout: 60s
+
+storage:
+  persistence_type: memory
+  cache_type: memory
+  cache_ttl: 3600
+  redis:
+    address: redis:6379
+    password: ""
+    db: 0
+
+processor:
+  queue_capacity: 10000
+  max_attempts: 3
+  processing_timeout: 5m
+  lock_ttl: 30
+  worker:
+    min_workers: 2
+    max_workers: 10
+    max_concurrent_jobs: 0
+    enable_auto_scale: true
+    target_queue_size: 100
+
+logging:
+  level: info
+  format: json

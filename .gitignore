@@ -1,0 +1,11 @@
+*.pdf
+.bin
+.DS_Store
+.idea
+.vscode
+.env
+.env.local
+.env.development
+.env.production
+
+config.yaml
